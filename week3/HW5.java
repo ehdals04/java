@@ -4,7 +4,7 @@ public class HW5 {
 	public static void main(String[] args) {
 		
 		int total,
-		won50000 =0, won10000 =0, won5000 =0, won1000 =0, won500 =0, won100 =0, won50 =0, won10 =0, won1 = 0;
+		won50000 =0, won10000 =0, won5000 =0, won1000 =0, won500 =0, won100 =0, won50 =0, won10 =0, won5 =0 won1 = 0;
 		
 		total = Integer.parseInt(args[0]);
 		
@@ -31,6 +31,9 @@ public class HW5 {
 			
 		won10 = total/10;
 		total-=10*won10;
+
+		won5 = total/5;
+		total-=5*won5;
 		
 		won1 = total/1;
 		total-=1*won1;
@@ -93,6 +96,13 @@ public class HW5 {
 			System.out.printf("십원 동전 %d개", won10);
 			exist = true;
 		}
+		if(won5>0){
+			if(exist){
+				System.out.printf(" , ");
+			}
+			System.out.printf("오원 동전 %d개", won5);
+			exist = true;
+		}
 		if(won1>0){
 			if(exist) {
 				System.out.printf(" , ");
@@ -101,7 +111,7 @@ public class HW5 {
 			exist = true;
 		}
 		
-		System.out.printf("이다");
+		System.out.printf("이다.");
 	}
 
 }
