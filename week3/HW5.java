@@ -36,14 +36,72 @@ public class HW5 {
 		total-=1*won1;
 			
 		
-		
+		boolean exist = false;
+
 		System.out.printf("%s원은 ", args[0]);
 		if(won50000>0) {
 			System.out.printf("오만원 %d장", won50000);
+			exist = true;
 			
 		}
+		if(won10000>0){
+			if(exist) {
+				System.out.printf(" , ");
+			}
+			System.out.printf("만원 %d장", won10000);
+			exist = true;
+		}
+		if(won5000>0){
+			if(exist) {
+				System.out.printf(" , ");
+			}
+			System.out.printf("오천원 %d장", won5000);
+			exist = true;
+		}
+		if(won1000>0){
+			if(exist) {
+				System.out.printf(" , ");
+			}
+			System.out.printf("천원 %d장", won1000);
+			exist = true;
+		}
+		if(won500>0){
+			if(exist) {
+				System.out.printf(" , ");
+			}
+			System.out.printf("오백원 동전 %d개", won500);
+			exist = true;
+		}
+		if(won100>0){
+			if(exist) {
+				System.out.printf(" , ");
+			}
+			System.out.printf("백원 동전 %d개", won100);
+			exist = true;
+		}
+		if(won50>0){
+			if(exist) {
+				System.out.printf(" , ");
+			}
+			System.out.printf("오십원 동전 %d개", won50);
+			exist = true;
+		}
+		if(won10>0){
+			if(exist) {
+				System.out.printf(" , ");
+			}
+			System.out.printf("십원 동전 %d개", won10);
+			exist = true;
+		}
+		if(won1>0){
+			if(exist) {
+				System.out.printf(" , ");
+			}
+			System.out.printf("일원 동전 %d개", won1);
+			exist = true;
+		}
 		
-		System.out.printf(" 50000만원 %d개\n 10000만원 %d개\n 5000원 %d개\n 1000원 %d개\n 500원 %d개\n 100원 %d개\n 50원 %d개\n 10원 %d개\n 1원 %d개\n", won50000, won10000, won5000, won1000, won500, won100, won50, won10, won1);
+		System.out.printf("이다");
 	}
 
 }
