@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class HW6 {
+public class HW2 {
 
 	static float Max_Float=Float.MIN_VALUE, Max_Integer=Float.MIN_VALUE, Max_String = 0; //가장 높은 평균을 가진 최대 정수, 실수, 문자열 찾기
 	static int 	Max_I_cnt =0, Max_F_cnt=0, Max_S_cnt=0, //가장 높은 평균을 가진 정수, 실수, 문자열 개수 저장
@@ -84,15 +84,15 @@ public class HW6 {
 				}
 			}
 			c++;
-			
+			System.out.printf("\n");
 			
 		}
 		System.out.printf("\n");
-		System.out.printf("정수 평균 최고 : %d번줄 %f (%d개)\n", Max_Ic, Max_Integer, Max_I_cnt);
-		System.out.printf("실수 평균 최고 : %d번줄 %f (%d개)\n", Max_Fc, Max_Float, Max_F_cnt);
-		System.out.printf("문자열 평균 최고 : %d번줄 %f (%d개)\n", Max_Sc, Max_String, Max_S_cnt);
-
 		
+		if(Max_I_cnt>0) System.out.printf("정수 평균 최고 : %d번줄 %f (%d개)\n", Max_Ic, Max_Integer, Max_I_cnt);
+		if(Max_F_cnt>0) System.out.printf("실수 평균 최고 : %d번줄 %f (%d개)\n", Max_Fc, Max_Float, Max_F_cnt);
+		if(Max_S_cnt>0) System.out.printf("문자열 길이 평균 최고 : %d번줄 %f (%d개)\n", Max_Sc, Max_String, Max_S_cnt);
+
 		
 	}
 	
